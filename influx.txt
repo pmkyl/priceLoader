@@ -1,0 +1,7 @@
+docker run -d --name influxdb -p 8086:8086 \
+      -v influxdb2:/var/lib/influxdb2 \
+      -e INFLUXDB_ADMIN_USER=my-user \
+      -e DOCKER_INFLUXDB_INIT_PASSWORD=my-password \
+      -e DOCKER_INFLUXDB_INIT_ORG=my-org \
+      -e DOCKER_INFLUXDB_INIT_BUCKET=my-bucket \
+      influxdb:2.0
